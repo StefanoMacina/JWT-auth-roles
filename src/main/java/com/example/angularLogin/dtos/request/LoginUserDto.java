@@ -1,10 +1,14 @@
-package com.example.angularLogin.dtos;
+package com.example.angularLogin.dtos.request;
 
-public class RegisterUserDto
+import jakarta.validation.constraints.NotBlank;
+
+public class LoginUserDto
 {
+    @NotBlank
     private String email;
+
+    @NotBlank
     private String password;
-    private String fullName;
 
     public String getEmail() {
         return email;
@@ -20,13 +24,5 @@ public class RegisterUserDto
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 }
